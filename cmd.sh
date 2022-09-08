@@ -16,7 +16,13 @@ function init() {
 
 judge()
 
+
+cd $PB_SRC_DIR
+git pull
+
 buf generate
+
+cd $PB_GO_DIR
 
 cp /tmp/api/* .
 
