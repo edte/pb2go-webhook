@@ -41,6 +41,8 @@ echo "cp go to api project"
 
 cp -r /tmp/api/* .
 
+go mod tidy
+
 echo "begin push api project"
 
 git status
