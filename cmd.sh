@@ -39,7 +39,7 @@ cd $PB_GO_DIR
 
 echo "cp go to api project"
 
-cp /tmp/api/* .
+cp -r /tmp/api/* .
 
 echo "begin push api project"
 
