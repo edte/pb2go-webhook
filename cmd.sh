@@ -43,6 +43,8 @@ cp -r /tmp/api/* .
 
 echo "begin push api project"
 
+git status
+
 git add *
 
 git commit -m "feat(*): update"
