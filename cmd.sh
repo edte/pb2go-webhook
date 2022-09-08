@@ -1,13 +1,7 @@
 #!/bin/bash
 
-func judge() {
-    if command -v buf >/dev/null 2>&1; then 
-    else 
-        init() 
-    fi
-}
 
-function init() {
+init() {
     echo "begin init"
     go install github.com/rookie-ninja/rk/cmd/rk@latest
     rk install buf
@@ -16,8 +10,16 @@ function init() {
     echo "end init"
 }
 
+judge() {
+    if command -v buf >/dev/null 2>&1; then 
+        echo "cmd exist";
+    else 
+        init
+    fi
+}
+
 echo "begin judge.."
-judge()
+judge
 echo "end judge"
 
 echo "enter $PB_SRC_DIR"
