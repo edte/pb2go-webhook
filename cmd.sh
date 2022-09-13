@@ -29,6 +29,9 @@ echo "begin build pb"
 
 git pull
 
+mv /tmp/api /tmp/api_back
+mkdir /tmp/api
+
 buf generate
 
 echo "build pb succ"
@@ -51,6 +54,7 @@ git add *
 
 git commit -m "feat(*): update"
 
+git pull
 git push
 
 echo "update succ"
