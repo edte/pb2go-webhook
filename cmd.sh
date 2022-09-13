@@ -42,6 +42,8 @@ cd $PB_GO_DIR
 
 echo "cp go to api project"
 
+rm -rf $PB_GO_DIR/*
+
 cp -r /tmp/api/* .
 
 go mod tidy
@@ -51,6 +53,7 @@ echo "begin push api project"
 git status
 
 git add *
+git add ./
 
 git commit -m "feat(*): update"
 
